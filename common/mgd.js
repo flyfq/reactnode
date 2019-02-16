@@ -7,7 +7,7 @@ module.exports = (opts,callback)=>{
   
   const MongoClient = require('mongodb').MongoClient;//创建连接实例
 
-  MongoClient.connect(opts.url,{ useNewUrlParser: true },function(err, client) {
+  MongoClient.connect(opts.url,function(err, client) {
 
     let db = client.db(opts.dbName);//use 库 使用库
 
